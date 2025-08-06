@@ -52,8 +52,8 @@ int main() {
     DensindadePopC2 = (float) PopulacaoC2 / AreaC2;
     PIBPerCapitaC1 = (PIBC1*1000000000) / PopulacaoC1;
     PIBPerCapitaC2 = (PIBC2*1000000000) / PopulacaoC2;
-    SuperPoderC1 = (float) PopulacaoC1+ AreaC1 + PIBC1 + (float) PontosTuristicosC1 + PIBPerCapitaC1 - DensindadePopC1;
-    SuperPoderC2 = (float) PopulacaoC2 + AreaC2 + PIBC2 + (float) PontosTuristicosC2 + PIBPerCapitaC2 - DensindadePopC2;
+    SuperPoderC1 = (float) PopulacaoC1+ AreaC1 + PIBC1 + (float) PontosTuristicosC1 + PIBPerCapitaC1 + (1.0f / DensindadePopC1);
+    SuperPoderC2 = (float) PopulacaoC2 + AreaC2 + PIBC2 + (float) PontosTuristicosC2 + PIBPerCapitaC2 + (1.0f / DensindadePopC2);
 
     // Exibindo os dados da carta 1
     printf("\nDados da Carta 1:\n");
